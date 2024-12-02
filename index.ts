@@ -30,7 +30,7 @@ const scanDirectory = (directory: string): TodoComment[] => {
   console.log(chalk.blue(`Scanning directory: ${directory}`));
 
   // Match all JavaScript and TypeScript files
-  const files = glob.sync(`${directory}/**/*.{js,ts}`, {
+  const files = glob.sync(`${directory}/**/*.{js,ts,jsx,tsx}`, {
     ignore: ["**/node_modules/**"],
   });
 
